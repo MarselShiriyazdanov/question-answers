@@ -1,0 +1,12 @@
+.row
+  - if answer.errors.any?
+    - answer.errors.full_messages.each do |message|
+      = message
+      br
+.row
+  = form_for [:question, answer] do |form|
+    .row
+      = form.label :body, "Text"
+      = form.text_area :body
+    .row
+      = form.submit

@@ -1,0 +1,8 @@
+.row
+  .col-2
+    h3 Questions
+  .col-10
+    - if current_user
+      = button_to "Ask questuion", new_question_path, class: "btn", method: :get
+- @questions.each do |question|
+  = render 'question', question: question

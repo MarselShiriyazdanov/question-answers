@@ -1,0 +1,12 @@
+.row
+  h3 Question
+.row
+  = @question.title
+.row
+  = @question.body
+.row
+  - @answers.each do |answer|
+    .col-12
+      = answer.body
+.row
+  = link_to "Answer question", new_question_answer_path(@question)
