@@ -6,43 +6,9 @@ provided by the [RailsApps Project](http://railsapps.github.io/).
 
 Rails Composer is supported by developers who purchase our RailsApps tutorials.
 
-Problems? Issues?
+Short description
 -----------
-
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
-
-Ruby on Rails
--------------
-
-This application requires:
-
-- Ruby 2.3.1
-- Rails 4.2.8
-
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
-
-Credits
--------
-
-License
--------
+This app built in classic rails-way. Basic idealogy for this is implementing all feature without try to guess what new features we will have in the future.
+No particular design patterns was applied (maybe except decorators). Although it would benefit from service layer (for example, for create/update user from google auth instead using method in *User* model and for question search handling), Query objects and form object for better separation of concerns I decided not to implement it because it overkill for simple application which will not grow and because of self imposed limitation of 4 hours for this task.
+Also it would be better to have separate table for oauth identities (or at least column for provider name) which will allow to add new oauth providers.
+Dockerfile with docker-compose is added for quick start.
